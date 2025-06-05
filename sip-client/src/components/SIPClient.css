@@ -1,0 +1,357 @@
+.sip-form, .sip-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sip-form h2,
+.sip-container h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.sip-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.sip-form button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sip-form button:hover {
+  background-color: #0056b3;
+}
+
+.status-container {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.registered {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.not-registered {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.call-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.call-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.call-control-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.call-control-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.call-control-button:active {
+  transform: translateY(0);
+}
+
+.call-control-button.mute {
+  background: #6c757d;
+  color: white;
+}
+
+.call-control-button.mute.active {
+  background: #dc3545;
+}
+
+.call-control-button.speaker {
+  background: #6c757d;
+  color: white;
+}
+
+.call-control-button.speaker.active {
+  background: #28a745;
+}
+
+.call-control-button.hold {
+  background: #ffc107;
+  color: #212529;
+}
+
+.call-control-button.hold.active {
+  background: #fd7e14;
+  color: white;
+}
+
+.call-control-button.hangup {
+  background: #dc3545;
+  color: white;
+}
+
+.call-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hangup-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.call-button:disabled,
+.hangup-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-incoming {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status-calling {
+  background-color: #ffc107;
+  color: black;
+}
+
+.status-connected {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-failed {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status-idle {
+  background-color: #6c757d;
+  color: white;
+}
+
+.device-available {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.device-unavailable {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+.incoming-call {
+  animation: blink 1s infinite;
+  background-color: #17a2b8;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.call-notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.call-notification {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  min-width: 300px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.caller-avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+}
+
+.caller-number {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.call-notification-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.accept-button {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.reject-button {
+  padding: 12px 24px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.accept-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.reject-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.call-ringing-animation {
+  position: relative;
+}
+
+.call-ringing-animation::before {
+  content: '';
+  position: absolute;
+  border: 3px solid #28a745;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: ripple 1s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

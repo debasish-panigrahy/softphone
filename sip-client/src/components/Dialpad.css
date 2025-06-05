@@ -1,0 +1,113 @@
+.dialpad-wrapper {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dialpad-display {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.dialpad-display input {
+  width: 100%;
+  padding: 12px;
+  font-size: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+  background: white;
+  color: #212529;
+}
+
+.clear-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.clear-button:hover {
+  color: #495057;
+}
+
+.dialpad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dialpad-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  aspect-ratio: 1;
+}
+
+.dialpad-button:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.dialpad-button:active {
+  transform: translateY(1px);
+}
+
+.digit {
+  font-size: 24px;
+  font-weight: 500;
+  color: #212529;
+}
+
+.letters {
+  font-size: 10px;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+.call-button {
+  grid-column: 2;
+  background: #28a745 !important;
+  border: none !important;
+}
+
+.call-button:hover {
+  background: #218838 !important;
+}
+
+.call-button:disabled {
+  background: #6c757d !important;
+  cursor: not-allowed;
+}
+
+.call-icon {
+  font-size: 24px;
+  color: white;
+}
+
+@media (hover: none) {
+  .dialpad-button:hover {
+    transform: none;
+    background: white;
+  }
+  
+  .call-button:hover {
+    background: #28a745 !important;
+  }
+}
